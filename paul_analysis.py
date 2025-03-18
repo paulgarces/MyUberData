@@ -18,7 +18,7 @@ uber_data = pd.read_csv("/Users/paulgarces/Desktop/uber_data/Rider/trips_data-0.
 
 repo_path = os.path.expanduser("~/Desktop/MyUberData")
 graphs_path = os.path.join(repo_path, "MyGraphs")
-report_path = os.path.join(repo_path, "My Uber Trip Analysis.md")
+report_path = os.path.join(repo_path, "README.md")
 
 os.makedirs(graphs_path, exist_ok=True)
 
