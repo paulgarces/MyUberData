@@ -4,10 +4,10 @@
 
 - **Total Trips:** 161
 - **Average Trip Duration:** 13.94 minutes
-- **Longest Trip:** 85.95 minutes
-- **Shortest Trip:** 1.35 minutes
-- **Earliest Trip:** 2021-06-25 21:18:17+00:00
-- **Latest Trip:** 2025-02-05 09:35:13+00:00
+- **Longest Trip:** 85.95 minutes, covering 54.21 miles
+- **Shortest Trip:** 1.35 minutes, covering 0.28 miles
+- **First Recorded Trip (by Year):** 2021-06-25 21:18:17+00:00
+- **Most Recent Trip (by Year):** 2025-02-05 09:35:13+00:00
 
 ## 🗺️ Most Common Locations
 
