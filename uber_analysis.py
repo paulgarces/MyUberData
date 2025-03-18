@@ -12,7 +12,7 @@ import sys
 
 pd.set_option('display.max_columns', None)
 
-uber_data = pd.read_csv("/Users/paulgarces/Desktop/uber_data/Rider/trips_data-0.csv")
+uber_data = pd.read_csv("trips_data-0.csv")
 
 repo_path = os.path.expanduser("~/Desktop/MyUberData")
 graphs_path = os.path.join(repo_path, "MyGraphs")
@@ -50,15 +50,25 @@ print(f"- **Average Trip Duration:** {uber_data['trip_duration'].mean():.2f} min
 longest_trip_idx = uber_data['trip_duration'].idxmax()
 longest_trip_duration = uber_data.loc[longest_trip_idx, 'trip_duration']
 longest_trip_distance = uber_data.loc[longest_trip_idx, 'distance']
+longest_pickup = uber_data.loc[longest_trip_idx, 'begintrip_address']
+longest_dropoff = uber_data.loc[longest_trip_idx, 'dropoff_address']
 
 shortest_trip_idx = uber_data['trip_duration'].idxmin()
 shortest_trip_duration = uber_data.loc[shortest_trip_idx, 'trip_duration']
 shortest_trip_distance = uber_data.loc[shortest_trip_idx, 'distance']
-print(f"- **Longest Trip:** {longest_trip_duration:.2f} minutes, covering {longest_trip_distance:.2f} miles")
-print(f"- **Shortest Trip:** {shortest_trip_duration:.2f} minutes, covering {shortest_trip_distance:.2f} miles")
+shortest_pickup = uber_data.loc[shortest_trip_idx, 'begintrip_address']
+shortest_dropoff = uber_data.loc[shortest_trip_idx, 'dropoff_address']
+
+print(f"- **Longest Trip:** {longest_trip_duration:.2f} minutes, covering **{longest_trip_distance:.2f} miles**")
+print(f"  - **Pickup:** {longest_pickup}")
+print(f"  - **Drop-off:** {longest_dropoff}")
+
+print(f"- **Shortest Trip:** {shortest_trip_duration:.2f} minutes, covering **{shortest_trip_distance:.2f} miles**")
+print(f"  - **Pickup:** {shortest_pickup}")
+print(f"  - **Drop-off:** {shortest_dropoff}")
+
 print(f"- **First Recorded Trip (by Year):** {uber_data['trip_start_time'].min()}")
 print(f"- **Most Recent Trip (by Year):** {uber_data['trip_end_time'].max()}\n")
-
 uber_data["clean_pickup_address"] = uber_data["begintrip_address"].str.replace(r"-\d{4}", "", regex=True)
 uber_data["clean_dropoff_address"] = uber_data["dropoff_address"].str.replace(r"-\d{4}", "", regex=True)
 
