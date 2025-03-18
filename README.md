@@ -1,20 +1,15 @@
 # 🚖 Uber Trip Analysis Report
 
-## 📝 About This Repository
-
-This repository contains an analysis of my Uber trips using Python.  
-
-- **Main Python Script:** All code for processing, analyzing, and visualizing the data is located in **`uber_analysis.py`**.
-- **HTML Files:** The `.html` files are **dynamically generated map visualizations**. They are **not part of the core analysis** but serve as interactive outputs for geospatial insights.
-
-- If you're looking for the main logic and code, check **`uber_analysis.py`**!
-
 ## 📊 General Trip Summary
 
 - **Total Trips:** 161
 - **Average Trip Duration:** 13.94 minutes
 - **Longest Trip:** 85.95 minutes, covering 54.21 miles
+  - **Pickup:** Calle de Agustín de Foxá 31, 28036 Madrid, ES
+  - **Drop-off:** C. Marqués del Arco, 1, 40001 Segovia, Spain
 - **Shortest Trip:** 1.35 minutes, covering 0.28 miles
+  - **Pickup:** 1130 SE Everett Mall Way Ste A, Everett, WA 98208, US
+  - **Drop-off:** 1405 SE Everett Mall Way, Everett, WA 98208, US
 - **First Recorded Trip (by Year):** 2021-06-25 21:18:17+00:00
 - **Most Recent Trip (by Year):** 2025-02-05 09:35:13+00:00
 
