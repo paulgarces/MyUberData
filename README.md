@@ -4,10 +4,10 @@
 
 - **Total Trips:** 161
 - **Average Trip Duration:** 13.94 minutes
-- **Longest Trip:** 85.95 minutes, covering 54.21 miles
+- **Longest Trip:** 85.95 minutes, covering **54.21 miles**
   - **Pickup:** Calle de Agustín de Foxá 31, 28036 Madrid, ES
   - **Drop-off:** C. Marqués del Arco, 1, 40001 Segovia, Spain
-- **Shortest Trip:** 1.35 minutes, covering 0.28 miles
+- **Shortest Trip:** 1.35 minutes, covering **0.28 miles**
   - **Pickup:** 1130 SE Everett Mall Way Ste A, Everett, WA 98208, US
   - **Drop-off:** 1405 SE Everett Mall Way, Everett, WA 98208, US
 - **First Recorded Trip (by Year):** 2021-06-25 21:18:17+00:00
