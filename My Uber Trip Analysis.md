@@ -27,7 +27,7 @@
 
 ## 🌍 Clustered Uber Map
 
-Using the **elbow method**, I determined that the optimal number of clusters for pickup and drop-off locations is **4**.
+- Using the **elbow method**, I determined that the optimal number of clusters for pickup and drop-off locations is **4**.
 
 🔗 [Click here to view the Clustered Uber Map](https://paulgarces.github.io/MyUberData/uber_clusters_map.html)
 

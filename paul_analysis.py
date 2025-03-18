@@ -194,7 +194,7 @@ folium.LayerControl().add_to(map_clusters)
 map_clusters.save(map_path)
 
 print("\n## 🌍 Clustered Uber Map\n")
-print("Using the **elbow method**, I determined that the optimal number of clusters for pickup and drop-off locations is **4**.\n")
+print(f"- Using the **elbow method**, I determined that the optimal number of clusters for pickup and drop-off locations is **4**.\n")
 print(f"🔗 [Click here to view the Clustered Uber Map](https://paulgarces.github.io/MyUberData/uber_clusters_map.html)\n")
 
 this_map = folium.Map(prefer_canvas=True)
