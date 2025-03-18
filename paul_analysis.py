@@ -6,11 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import folium
 from sklearn.cluster import KMeans
-from sklearn.model_selection import train_test_split
 from folium.plugins import MarkerCluster
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_absolute_error, r2_score
 import os
 import sys
 
