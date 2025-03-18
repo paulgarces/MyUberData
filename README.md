@@ -11,19 +11,42 @@
 
 ## 🗺️ Most Common Locations
 
-- **Most common pickup location:** 1029 NE 62nd St, Seattle, WA 98115-6603, US
-- **Most common dropoff location:** 1029 NE 62nd St, Seattle, WA 98115-6603, US
+- **Top 5 most common pickup locations:**
+  - 1029 NE 62nd St, Seattle, WA 98115-6603, US (24 times)
+  - 1500 Broadway, Seattle, WA 98122, US (4 times)
+  - Grant Ln, Seattle, WA 98195, US (2 times)
+  - Clark Rd, Seattle, WA 98195, US (2 times)
+  - All Terminals (2 times)
+
+- **Top 5 most common dropoff locations:**
+  - 1029 NE 62nd St, Seattle, WA 98115-6603, US (61 times)
+
+  - 1029 NE 62nd St, Seattle, WA 98115, US (16 times)
+
+  - 4245 Roosevelt Way NE 2nd floor w220, Seattle, WA 98105, USA (8 times)
+
+  - 4000 15th Ave NE, Seattle, WA 98195, US (7 times)
+
+  - Main Terminal, Seattle-Tacoma International Airport (SEA), Seattle, WA (6 times)
 
 ## 🕒 Uber Trips by Hour
 
-- **Peak Hour:** 8:00
-- **Least Busy Hour:** 11:00
+- **Peak Hour:** 8:00 AM (23 trips)
+- **Least Busy Hour:** 11:00 AM (2 trips)
 
 ## 📅 Uber Trips by Day of the Week
 
-- **Busiest Day:** Sunday
-- **Least Busy Day:** Tuesday
+- **Busiest Day:** Sunday (35 trips)
+- **Least Busy Day:** Tuesday (10 trips)
 
+- **Trips per day:**
+  - Sunday (35 trips)
+  - Saturday (29 trips)
+  - Wednesday (27 trips)
+  - Friday (24 trips)
+  - Thursday (23 trips)
+  - Monday (13 trips)
+  - Tuesday (10 trips)
 
 ## 🌍 Clustered Uber Map
 

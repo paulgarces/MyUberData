@@ -52,26 +52,46 @@ print(f"- **Shortest Trip:** {uber_data['trip_duration'].min():.2f} minutes")
 print(f"- **Earliest Trip:** {uber_data['trip_start_time'].min()}")
 print(f"- **Latest Trip:** {uber_data['trip_end_time'].max()}\n")
 
-most_common_pickup = uber_data['begintrip_address'].mode()[0]
-most_common_dropoff = uber_data['dropoff_address'].mode()[0]
+top_pickups = uber_data['begintrip_address'].value_counts().nlargest(5)
+top_dropoffs = uber_data['dropoff_address'].value_counts().nlargest(5)
 
 print("## 🗺️ Most Common Locations\n")
-print(f"- **Most common pickup location:** {most_common_pickup}")
-print(f"- **Most common dropoff location:** {most_common_dropoff}\n")
+print("- **Top 5 most common pickup locations:**")
+for location, count in top_pickups.items():
+    print(f"  - {location} ({count} times)")
 
-peak_hour = uber_data['hour'].mode()[0]
-low_hour = uber_data['hour'].value_counts().idxmin()
+print("\n- **Top 5 most common dropoff locations:**")
+for location, count in top_dropoffs.items():
+    print(f"  - {location} ({count} times)\n")
+
+hour_counts = uber_data['hour'].value_counts().sort_index()
+peak_hour = hour_counts.idxmax()
+peak_hour_count = hour_counts.max()
+low_hour = hour_counts.idxmin()
+low_hour_count = hour_counts.min()
+
+def format_hour(hour):
+    suffix = "AM" if hour < 12 else "PM"
+    formatted_hour = hour if hour <= 12 else hour - 12
+    return f"{formatted_hour}:00 {suffix}"
 
 print("## 🕒 Uber Trips by Hour\n")
-print(f"- **Peak Hour:** {peak_hour}:00")
-print(f"- **Least Busy Hour:** {low_hour}:00\n")
+print(f"- **Peak Hour:** {format_hour(peak_hour)} ({peak_hour_count} trips)")
+print(f"- **Least Busy Hour:** {format_hour(low_hour)} ({low_hour_count} trips)\n")
 
-busiest_day = uber_data['day_of_week'].value_counts().idxmax()
-least_busy_day = uber_data['day_of_week'].value_counts().idxmin()
+day_counts = uber_data['day_of_week'].value_counts()
+busiest_day = day_counts.idxmax()
+busiest_day_count = day_counts.max()
+least_busy_day = day_counts.idxmin()
+least_busy_day_count = day_counts.min()
 
 print("## 📅 Uber Trips by Day of the Week\n")
-print(f"- **Busiest Day:** {busiest_day}")
-print(f"- **Least Busy Day:** {least_busy_day}\n")
+print(f"- **Busiest Day:** {busiest_day} ({busiest_day_count} trips)")
+print(f"- **Least Busy Day:** {least_busy_day} ({least_busy_day_count} trips)\n")
+
+print("- **Trips per day:**")
+for day, count in day_counts.items():
+    print(f"  - {day} ({count} trips)")
 
 plt.figure(figsize=(8,5))
 sns.histplot(uber_data['trip_duration'], bins=30)
