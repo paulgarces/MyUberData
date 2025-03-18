@@ -24,10 +24,12 @@
 - **Busiest Day:** Sunday
 - **Least Busy Day:** Tuesday
 
-✅ Separate Uber cluster map saved at: /Users/paulgarces/Desktop/MyUberData/uber_clusters_map.html
-## 📌 K-Means Clustering Insights
 
-- Used **4 Clusters** for pickup locations
+## 🌍 Clustered Uber Map
+
+Using the **elbow method**, I determined that the optimal number of clusters for pickup and drop-off locations is **4**.
+
+🔗 [Click here to view the Clustered Uber Map](https://paulgarces.github.io/MyUberData/uber_clusters_map.html)
 
 ## 🗺️ Interactive Uber Map
 
