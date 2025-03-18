@@ -55,17 +55,17 @@ print(f"- **Latest Trip:** {uber_data['trip_end_time'].max()}\n")
 uber_data["clean_pickup_address"] = uber_data["begintrip_address"].str.replace(r"-\d{4}", "", regex=True)
 uber_data["clean_dropoff_address"] = uber_data["dropoff_address"].str.replace(r"-\d{4}", "", regex=True)
 
-top_pickups = uber_data['begintrip_address'].value_counts().nlargest(5)
-top_dropoffs = uber_data['dropoff_address'].value_counts().nlargest(5)
+top_pickup_locations = uber_data["clean_pickup_address"].value_counts().head(5)
+top_dropoff_locations = uber_data["clean_dropoff_address"].value_counts().head(5)
 
 print("## 🗺️ Most Common Locations\n")
-print("- **Top 5 most common pickup locations:**")
-for location, count in top_pickups.items():
-    print(f"  - {location} ({count} times)")
+print("- **Most common pickup locations:**")
+for address, count in top_pickup_locations.items():
+    print(f"  - {address} ({count} times)")
 
-print("\n- **Top 5 most common dropoff locations:**")
-for location, count in top_dropoffs.items():
-    print(f"  - {location} ({count} times)\n")
+print("\n- **Most common dropoff locations:**")
+for address, count in top_dropoff_locations.items():
+    print(f"  - {address} ({count} times)")
 
 hour_counts = uber_data['hour'].value_counts().sort_index()
 peak_hour = hour_counts.idxmax()
