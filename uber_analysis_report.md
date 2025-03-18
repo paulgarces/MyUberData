@@ -24,10 +24,7 @@
 - **Busiest Day:** Sunday
 - **Least Busy Day:** Tuesday
 
-## 📌 K-Means Clustering Insights
-
-- Used **3 Clusters** for pickup locations
-
+✅ Separate Uber cluster map saved at: /Users/paulgarces/Desktop/MyUberData/uber_clusters_map.html
 ## 🗺️ Interactive Uber Map
 
 🔗 [Click here to view my Uber trip map](https://paulgarces.github.io/MyUberData/myubermap.html)
