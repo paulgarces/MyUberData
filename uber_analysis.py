@@ -52,6 +52,9 @@ print(f"- **Shortest Trip:** {uber_data['trip_duration'].min():.2f} minutes")
 print(f"- **Earliest Trip:** {uber_data['trip_start_time'].min()}")
 print(f"- **Latest Trip:** {uber_data['trip_end_time'].max()}\n")
 
+uber_data["clean_pickup_address"] = uber_data["begintrip_address"].str.replace(r"-\d{4}", "", regex=True)
+uber_data["clean_dropoff_address"] = uber_data["dropoff_address"].str.replace(r"-\d{4}", "", regex=True)
+
 top_pickups = uber_data['begintrip_address'].value_counts().nlargest(5)
 top_dropoffs = uber_data['dropoff_address'].value_counts().nlargest(5)
 
