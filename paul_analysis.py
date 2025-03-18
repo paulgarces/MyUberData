@@ -80,7 +80,7 @@ sns.histplot(uber_data['trip_duration'], bins=30)
 plt.xlabel("Trip Duration (minutes)")
 plt.ylabel("Number of Trips")
 plt.title("Distribution of Uber Trip Durations")
-plt.savefig(os.path.join(graphs_path, "trip_duration_distribution.png"))
+plt.savefig(os.path.join(graphs_path, "trip_duration_distribution.png"))  # Save to MyGraphs
 plt.close()
 
 plt.figure(figsize=(10,5))
@@ -88,7 +88,7 @@ sns.countplot(x='hour', data=uber_data)
 plt.title("Uber Trips by Hour of the Day")
 plt.xlabel("Hour of the Day")
 plt.ylabel("Number of Trips")
-plt.savefig(os.path.join(graphs_path, "trips_by_hour.png"))
+plt.savefig(os.path.join(graphs_path, "trips_by_hour.png"))  # Save to MyGraphs
 plt.close()
 
 plt.figure(figsize=(10,5))
@@ -97,7 +97,7 @@ sns.countplot(x='day_of_week', data=uber_data,
 plt.title("Uber Trips by Day of the Week")
 plt.xlabel("Day of the Week")
 plt.ylabel("Number of Trips")
-plt.savefig(os.path.join(graphs_path, "trips_by_day.png"))
+plt.savefig(os.path.join(graphs_path, "trips_by_day.png"))  # Save to MyGraphs
 plt.close()
 
 pickup_coords = uber_data[['begintrip_lat', 'begintrip_lng']]
@@ -123,8 +123,8 @@ plt.xlabel("Number of Clusters (k)")
 plt.ylabel("Within-Cluster Sum of Squares (WCSS)")
 plt.title("Elbow Method for Pickup Locations")
 plt.grid()
-plt.savefig("pickup_elbow_method.png")
-# plt.show()
+plt.savefig(os.path.join(graphs_path, "pickup_elbow_method.png"))  # Save to MyGraphs
+plt.close()
 
 plt.figure(figsize=(8, 5))
 plt.plot(k_values, wcss_dropoff, marker='o', linestyle='-')
@@ -132,8 +132,8 @@ plt.xlabel("Number of Clusters (k)")
 plt.ylabel("Within-Cluster Sum of Squares (WCSS)")
 plt.title("Elbow Method for Drop-off Locations")
 plt.grid()
-plt.savefig("dropoff_elbow_method.png")
-# plt.show()
+plt.savefig(os.path.join(graphs_path, "dropoff_elbow_method.png"))  # Save to MyGraphs
+plt.close()
 
 repo_path = os.path.expanduser("~/Desktop/MyUberData")
 map_path = os.path.join(repo_path, "uber_clusters_map.html")
