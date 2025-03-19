@@ -6,7 +6,8 @@ This repository contains an analysis of my Uber trips using Python.
 
 - **Main Python Script:** All code for processing, analyzing, and visualizing the data is located in **`uber_analysis.py`**.
 - **HTML Files:** The `.html` files are **dynamically generated map visualizations**. They are **not part of the core analysis** but serve as interactive outputs for geospatial insights.
-- If you're looking for the main logic, check **`uber_analysis.py`**!
+
+If you're looking for the main logic, check **`uber_analysis.py`**!
 
 ## 📊 General Trip Summary
 
