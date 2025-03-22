@@ -65,7 +65,7 @@ All graphs are saved in the `MyGraphs` folder:
 | `trips_data-0.csv`     | Raw Uber trip data                         |
 | `uber_analysis.py`     | Full code for data cleaning, analysis, mapping |
 | `README.md`            | This report (auto-generated)               |
-| `MyGraphs/`            | Contains saved graphs                      |
+| `MyGraphs`            | Contains saved graphs                      |
 
 ---
 
