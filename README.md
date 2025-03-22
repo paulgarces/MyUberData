@@ -1,6 +1,6 @@
 # 🚖 Uber Trip Analysis Report
 
-This project performs an in-depth analysis of Uber trip data exported from a user's account. It summarizes trip durations, locations, and patterns over time while visualizing geographic clusters of pickups and drop-offs using interactive maps.
+This project performs an simple and in-depth analysis of Uber trip data exported from my personal account. It summarizes trip durations, locations, and patterns over time while visualizing geographic clusters of pickups and drop-offs using interactive maps.
 
 ---
 
@@ -8,7 +8,7 @@ This project performs an in-depth analysis of Uber trip data exported from a use
 
 - **Data Source:** `trips_data-0.csv` exported from Uber's data portal
 - **Tooling:** Python, Pandas, Matplotlib, Seaborn, scikit-learn (KMeans), Folium
-- **Code:** The full analysis is implemented in [`uber_analysis.py`](uber_analysis.py)
+- **Code:** The full analysis and logic is implemented in [`uber_analysis.py`](uber_analysis.py)
 - **Goal:** Extract trends from trip data and visualize the most common locations and behaviors over time
 
 ---
