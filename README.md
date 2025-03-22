@@ -33,7 +33,7 @@ This project performs an simple and in-depth analysis of Uber trip data exported
 ---
 
 ### 📊 3. Visualizations
-All graphs are saved in the `MyGraphs/` folder:
+All graphs are saved in the `MyGraphs` folder:
 - Distribution of trip durations
 - Trips per hour of the day
 - Trips per day of the week
