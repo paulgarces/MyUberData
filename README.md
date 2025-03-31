@@ -1,10 +1,10 @@
-# 🚖 Uber Trip Analysis Report
+# Uber Trip Analysis Report
 
 This project performs an simple and in-depth analysis of Uber trip data exported from my personal account. It summarizes trip durations, locations, and patterns over time while visualizing geographic clusters of pickups and drop-offs using interactive maps.
 
 ---
 
-## 🔍 Project Overview
+## Project Overview
 
 - **Data Source:** `trips_data-0.csv` exported from Uber's data portal
 - **Tooling:** Python, Pandas, Matplotlib, Seaborn, scikit-learn (KMeans), Folium
@@ -13,9 +13,9 @@ This project performs an simple and in-depth analysis of Uber trip data exported
 
 ---
 
-## 🧠 Methodology
+## Methodology
 
-### 🧼 1. Data Cleaning
+### 1. Data Cleaning
 - Removed trips with statuses: `rider_canceled`, `driver_canceled`, or `unfulfilled`
 - Replaced missing addresses with latitude/longitude fallback values
 - Converted timestamps to datetime objects for easier manipulation
@@ -23,7 +23,7 @@ This project performs an simple and in-depth analysis of Uber trip data exported
 
 ---
 
-### 🗺️ 2. Location Analysis
+### 2. Location Analysis
 - Identified **most common pickup and drop-off addresses**
 - Cleaned ZIP code suffixes (e.g., `-1234`) for better grouping
 - Calculated frequency of trips by:
@@ -32,7 +32,7 @@ This project performs an simple and in-depth analysis of Uber trip data exported
 
 ---
 
-### 📊 3. Visualizations
+### 3. Visualizations
 All graphs are saved in the `MyGraphs` folder:
 - Distribution of trip durations
 - Trips per hour of the day
@@ -41,14 +41,14 @@ All graphs are saved in the `MyGraphs` folder:
 
 ---
 
-### 📍 4. Geographic Clustering (KMeans)
+### 4. Geographic Clustering (KMeans)
 - Applied **KMeans clustering** to both pickup and drop-off GPS coordinates
 - Used the **elbow method** to determine `k = 4` as the optimal cluster count
 - Created two interactive Folium maps:
 
 ---
 
-## 🌐 Interactive Maps
+## Interactive Maps
 
 - **[Clustered Uber Map](https://paulgarces.github.io/MyUberData/uber_clusters_map.html)**  
   Shows pickup/drop-off location clusters using KMeans
@@ -58,7 +58,7 @@ All graphs are saved in the `MyGraphs` folder:
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 | File/Folder           | Purpose                                     |
 |------------------------|---------------------------------------------|
@@ -69,7 +69,7 @@ All graphs are saved in the `MyGraphs` folder:
 
 ---
 
-## 📊 General Trip Summary
+## General Trip Summary
 
 - **Total Trips:** 161  
 - **Average Trip Duration:** 13.94 minutes  
@@ -86,7 +86,7 @@ All graphs are saved in the `MyGraphs` folder:
 
 ---
 
-## 🗺️ Most Common Locations
+## Most Common Locations
 
 ### Most Frequent Pickup Locations:
 - 1029 NE 62nd St, Seattle, WA 98115, US (24 times)  
@@ -104,14 +104,14 @@ All graphs are saved in the `MyGraphs` folder:
 
 ---
 
-## 🕒 Uber Trips by Hour
+## Uber Trips by Hour
 
 - **Peak Hour:** 8:00 AM (23 trips)  
 - **Least Busy Hour:** 11:00 AM (2 trips)
 
 ---
 
-## 📅 Uber Trips by Day of the Week
+## Uber Trips by Day of the Week
 
 - **Busiest Day:** Sunday (35 trips)  
 - **Least Busy Day:** Tuesday (10 trips)
