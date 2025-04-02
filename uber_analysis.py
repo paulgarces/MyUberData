@@ -42,9 +42,9 @@ uber_data['day_of_week'] = uber_data['trip_start_time'].dt.day_name()
 uber_data['month'] = uber_data['trip_start_time'].dt.month_name()
 uber_data['trip_duration'] = (uber_data['trip_end_time'] - uber_data['trip_start_time']).dt.total_seconds() / 60
 
-print("# 🚖 Uber Trip Analysis Report\n")
+print("# Uber Trip Analysis Report\n")
 
-print("## 📊 General Trip Summary\n")
+print("## General Trip Summary\n")
 print(f"- **Total Trips:** {len(uber_data)}")
 print(f"- **Average Trip Duration:** {uber_data['trip_duration'].mean():.2f} minutes")
 longest_trip_idx = uber_data['trip_duration'].idxmax()
@@ -75,7 +75,7 @@ uber_data["clean_dropoff_address"] = uber_data["dropoff_address"].str.replace(r"
 top_pickup_locations = uber_data["clean_pickup_address"].value_counts().head(5)
 top_dropoff_locations = uber_data["clean_dropoff_address"].value_counts().head(5)
 
-print("## 🗺️ Most Common Locations\n")
+print("## Most Common Locations\n")
 print("- **Most common pickup locations:**")
 for address, count in top_pickup_locations.items():
     print(f"  - {address} ({count} times)")
@@ -95,7 +95,7 @@ def format_hour(hour):
     formatted_hour = hour if hour <= 12 else hour - 12
     return f"{formatted_hour}:00 {suffix}"
 
-print("## 🕒 Uber Trips by Hour\n")
+print("## Uber Trips by Hour\n")
 print(f"- **Peak Hour:** {format_hour(peak_hour)} ({peak_hour_count} trips)")
 print(f"- **Least Busy Hour:** {format_hour(low_hour)} ({low_hour_count} trips)\n")
 
@@ -105,7 +105,7 @@ busiest_day_count = day_counts.max()
 least_busy_day = day_counts.idxmin()
 least_busy_day_count = day_counts.min()
 
-print("## 📅 Uber Trips by Day of the Week\n")
+print("## Uber Trips by Day of the Week\n")
 print(f"- **Busiest Day:** {busiest_day} ({busiest_day_count} trips)")
 print(f"- **Least Busy Day:** {least_busy_day} ({least_busy_day_count} trips)\n")
 
@@ -118,7 +118,7 @@ sns.histplot(uber_data['trip_duration'], bins=30)
 plt.xlabel("Trip Duration (minutes)")
 plt.ylabel("Number of Trips")
 plt.title("Distribution of Uber Trip Durations")
-plt.savefig(os.path.join(graphs_path, "trip_duration_distribution.png"))  # Save to MyGraphs
+plt.savefig(os.path.join(graphs_path, "trip_duration_distribution.png"))
 plt.close()
 
 plt.figure(figsize=(10,5))
@@ -126,7 +126,7 @@ sns.countplot(x='hour', data=uber_data)
 plt.title("Uber Trips by Hour of the Day")
 plt.xlabel("Hour of the Day")
 plt.ylabel("Number of Trips")
-plt.savefig(os.path.join(graphs_path, "trips_by_hour.png"))  # Save to MyGraphs
+plt.savefig(os.path.join(graphs_path, "trips_by_hour.png"))
 plt.close()
 
 plt.figure(figsize=(10,5))
@@ -135,7 +135,7 @@ sns.countplot(x='day_of_week', data=uber_data,
 plt.title("Uber Trips by Day of the Week")
 plt.xlabel("Day of the Week")
 plt.ylabel("Number of Trips")
-plt.savefig(os.path.join(graphs_path, "trips_by_day.png"))  # Save to MyGraphs
+plt.savefig(os.path.join(graphs_path, "trips_by_day.png"))
 plt.close()
 
 pickup_coords = uber_data[['begintrip_lat', 'begintrip_lng']]
@@ -161,7 +161,7 @@ plt.xlabel("Number of Clusters (k)")
 plt.ylabel("Within-Cluster Sum of Squares (WCSS)")
 plt.title("Elbow Method for Pickup Locations")
 plt.grid()
-plt.savefig(os.path.join(graphs_path, "pickup_elbow_method.png"))  # Save to MyGraphs
+plt.savefig(os.path.join(graphs_path, "pickup_elbow_method.png"))
 plt.close()
 
 plt.figure(figsize=(8, 5))
@@ -170,7 +170,7 @@ plt.xlabel("Number of Clusters (k)")
 plt.ylabel("Within-Cluster Sum of Squares (WCSS)")
 plt.title("Elbow Method for Drop-off Locations")
 plt.grid()
-plt.savefig(os.path.join(graphs_path, "dropoff_elbow_method.png"))  # Save to MyGraphs
+plt.savefig(os.path.join(graphs_path, "dropoff_elbow_method.png"))
 plt.close()
 
 repo_path = os.path.expanduser("~/Desktop/MyUberData")
@@ -241,7 +241,7 @@ folium.LayerControl().add_to(map_clusters)
 
 map_clusters.save(map_path)
 
-print("\n## 🌍 Clustered Uber Map\n")
+print("\n## Clustered Uber Map\n")
 print(f"- Using the **elbow method**, I determined that the optimal number of clusters for pickup and drop-off locations is **4**.\n")
 print(f"🔗 [Click here to view the Clustered Uber Map](https://paulgarces.github.io/MyUberData/uber_clusters_map.html)\n")
 
@@ -282,8 +282,8 @@ uber_data.apply(plotDot, axis=1)
 map_path = os.path.join(repo_path, "myubermap.html")
 this_map.save(map_path)
 
-print("## 🗺️ Interactive Uber Map\n")
-print(f"🔗 [Click here to view my Uber trip map](https://paulgarces.github.io/MyUberData/myubermap.html)\n")
+print("## Interactive Uber Map\n")
+print(f"[Click here to view my Uber trip map](https://paulgarces.github.io/MyUberData/myubermap.html)\n")
 
 sys.stdout.close()
 sys.stdout = sys.__stdout__
